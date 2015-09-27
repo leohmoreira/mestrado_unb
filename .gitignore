@@ -1,0 +1,8 @@
+*.tex~
+*.pdf
+*.aux
+*.backup
+*.log
+*.dvi
+*.out
+*.*~
