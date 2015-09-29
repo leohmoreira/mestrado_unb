@@ -5,65 +5,118 @@
 \usepackage{indentfirst}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
+\usepackage{setspace}
 
 % include --------------------------------------------------------------------------------------------------------------------
-\include{headerFooterUnb}
+% \include{headerFooterUnb}
 % include --------------------------------------------------------------------------------------------------------------------
 
 \begin{document}
+\onehalfspacing
 %comandos-----------------------------------------------------------------------------------------------------------------
 \newcommand{\linhaDupla}{\newline \newline}
 
 %comandos-----------------------------------------------------------------------------------------------------------------
 
-\begin{figure}
- \includegraphics[width=0.8\textwidth]{images/logoUnB.png}
-\end{figure}
-
-\textbf{PROGRAMA DE PÓS-GRADUAÇÃO EM INFORMÁTICA}
-\linhaDupla
-\textbf{Nome:} Leonardo Henrique Moreira
-\linhaDupla
-\textbf{CPF:} 294.490.948-70
-\linhaDupla
-\textbf{Proposta de Projeto de Pesquisa}
-\linhaDupla
-\textbf{Título:}
-\linhaDupla
-\textbf{Linha de Pesquisa:}
-\linhaDupla
-\indent\textbf{Área de Pesquisa:}
-
-\newpage
+% \begin{figure}
+%  \includegraphics[width=0.8\textwidth]{images/logoUnB.png}
+% \end{figure}
+% 
+% \textbf{PROGRAMA DE PÓS-GRADUAÇÃO EM INFORMÁTICA}
+% \linhaDupla
+% \textbf{Nome:} Leonardo Henrique Moreira
+% \linhaDupla
+% \textbf{CPF:} 294.490.948-70
+% \linhaDupla
+% \textbf{Proposta de Projeto de Pesquisa}
+% \linhaDupla
+% \textbf{Título:}
+% \linhaDupla
+% \textbf{Linha de Pesquisa:}
+% \linhaDupla
+% \indent\textbf{Área de Pesquisa:}
+% 
+% \newpage
 \section{Introdução}
-Com a grande facilidade de acesso à informação atualmente, as pessoas acabam sendo apresentadas a um grande volume 
-de dados. Muitos destes dados são relevantes porém existem aqueles que não agregam valor. \\
-\indent De maneira especial, em um cenário militar, uma grande quantidade de informações pode prejudicar o processo decisório do 
-comandante pois este volume aliado à velocidade com a qual elas são apresentadas podem dificultar a definição de qual 
-tratamento cada uma deve receber.\\
-\indent Face a este problema, esta proposta de estudo baseia-se nas áreas de inteligência artifical e suporte à decisão em Sistemas 
-de Comando e Controle (C2) tendo como foco principal o uso destas teorias para ordenar as informações de tal forma que o 
-valor final agregado ao decisor seja maximizado.\\
-\indent O objetivo do estudo é criar um método capaz de realizar o ordenamento da lista de informações presente no sistema de 
-Comando e Controle utilizado. A motivação para tal tratamento é oferecer ao decisor a possibilidade de avaliar, de maneira 
-prioritária, as informações mais importantes ou mais urgentes, uma vez que tratá-las na ordem de chegada pode não ser 
-eficiente. Como o exercício de C2 está presente nos diversos níveis hierárquicos das operações, a valorização de cada item 
-da lista depende da sua função de combate (movimento e manobra, inteligência, logística, fogos, proteção), do escalão de 
-seu decisor, da urgência no seu atendimento e principalmente do seu instante de chegada. Outra característica importante 
-deste método deve ter é ser capaz de ser implementado e integrado à Família de Aplicativos de Comando e Controle da 
-Força Terrestre.\\
-\indent A construção deste modelo é de importância ao Exército porque através dele é possível auxiliar o processo de tomada de 
+A capacidade do homem em perceber, interpretar e interagir com o ambiente no qual está inserido depende de um elemento essencial, a informação.
+O estado atual da tecnologia, aliado à sua capacidade de cobertura global e em tempo real, aumenta a facilidade de acesso à informação e dessa forma as pessoas 
+tem sido apresentadas a um volume de dados cada vez maior. Apesar de muitos destes dados serem relevantes, existem também aqueles que não agregam valor.\\
+\indent De maneira especial, em um cenário militar, essa grande quantidade de informação pode prejudicar o processo decisório do 
+comandante pois este volume, aliado à velocidade com a qual elas são apresentadas, pode dificultar a definição de qual tratamento cada uma deve receber.
+A sobrecarga no decisor pode causar tanto atenção excessiva a fatos pouco relevantes quanto distração sobre pontos importantes.\\
+\indent A condição ideal para o decisor, em qualquer escalão, é que exista um equilíbrio entre o fluxo de informação e o processo de interpretação dos dados.
+Entretanto, apesar da alta taxa na qual dados tem sido coletados oriundos do grande número de sensores e sistemas utilizados para os mais diversos fins, 
+verifica-se que a presença de ferramentas e algoritmos capazes de tratar esse volume de informação não existem [Savas et al 2014].\\
+\indent Face a este problema, esta proposta de estudo visa basear-se nas áreas de inteligência artifical, teoria dos jogos e suporte à decisão em Sistemas 
+de Comando e Controle (C2) tendo como foco principal o uso destas teorias para ordenar as informações de tal forma que o valor final agregado ao decisor seja 
+maximizado.\\
+\indent A construção deste modelo é importância ao Exército Brasileiro porque através dele é possível auxiliar o processo de tomada de 
 decisão devido ao fato de evitar ou diminuir a sobrecarga de informação nos decisores. Outro aspecto que aumenta a 
 contribuição desta proposta de trabalho é o contínuo emprego das Forças Armadas, em especial o Exército, em operações 
 de garantia da lei e da ordem e de defesa interna durante as quais a cobertura dos veículos de jornalismo garante a 
 comunicação da informação praticamente em tempo real.
 
 \section{Justificativa}
+De acordo com a doutrina de Comando e Controle relaciona a qualidade de informação por meio de sete critérios: precisão, oportunidade, facilidade de uso,
+suficiência, brevidade e segurança. O segundo item merece atenção especial por relacionar o instante da coleta da informação com o momento até o qual ela é 
+útil para o processo de toma de decisão.\\
+\indent Segundo [Savas et al 2014], não existem ferramentas e algoritmos capazes de tratar o volume de informação, principalmente nos critérios supracitados. Aliando à
+essa condição a busca pela superioridade de informação, isto é, a habilidade de coletar e processar dados, torna-se evidente a necessidade de
+contribuições científicas e técnicas nesta área.
+
 \section{Objetivos}
+\indent O objetivo do estudo é criar um método capaz de realizar o ordenamento da lista de informações presente no sistema de 
+Comando e Controle utilizado. A motivação para tal tratamento é oferecer ao decisor a possibilidade de avaliar, de maneira 
+prioritária, as informações mais importantes ou mais urgentes, uma vez que tratá-las na ordem de chegada pode não ser 
+eficiente.\\
+\indent Como o exercício de C2 está presente nos diversos níveis hierárquicos das operações, a valorização de cada item 
+da lista depende da sua função de combate (movimento e manobra, inteligência, logística, fogos, proteção), do escalão de 
+seu decisor, da urgência no seu atendimento e principalmente do seu instante de chegada. Outra característica importante 
+deste método deve ter é ser capaz de ser implementado e integrado à Família de Aplicativos de Comando e Controle da 
+Força Terrestre.\\
 \section{Revisão da literatura}
+O Modelo Dinâmico de Cognição Situada (\textit{Dynamic Model of Situated Cognition - DMSC}) foi introduzido pela primeira vez em 2003 e rapidamente ganhou 
+aceitacao na comunidade do DoD como um modelo descritivo de processamento e fluxo de dados e informacoes no campo de batalha [Phillips 2008].\\
+\indent Este modelo demonstra a relação entre os sistemas tecnológicos e processos perceptivos e cognitivos humanos, fornecendo um quadro eficaz no qual se pode
+ver o fluxo de dados e informações em um sistema complexo. Apesar de não ser um modelo analítico, o DMSC fornece um meio de ver o problema do fluxo de dados e 
+informações de uma forma que seja acessível não somente para os analistas como também para os decisores. O DMSC é a base para a construção do modelo matemático
+ para qualificação da informação.\\
+\indent Além desse trabalho, outras pesquisas relatam a análise de informação no cenário de Comando e Controle. Entre elas destacam-se o uso de teoria dos 
+jogos para predição de ameaças e análise de situação [Brynielsson et al 2004] e os desafios para sistema de apoio à decisão nesse cenário, principalmente em 
+relação ao impacto do atraso no tratamento de informação.\\
+
+
 \section{Metodologia}
+\indent Para atingir o objetivo estabelicido, será primeiramente conduzida uma pesquisa bibliográfica relativa a Comando e Controle, buscando mapear as ligações 
+com as áreas de inteligência artificial, teoria dos jogos e suporte à decisão. A partir daí, será feito um estudo mais detalhado do processo de qualificação da
+informação com objetivo de produzir um modelo matemático que considere os critérios, principalmente o da oportunidade.\\
+\indent Com a definição desse modelo, serão estudados cenários de uso e serão realizadas simulações verificando qual o ganho do ordenamento das informações para
+ o processo decisório.
 \section{Plano de trabalho}
+O curso será realizado através das seguintes atividades (não necessariamente sequenciais):
+\begin{itemize}
+ \item cursar disciplinas necessárias;
+ \item executar pesquisa bibliográfica sobre XXX;
+ \item defender qualificação com proposta de pesquisa específica;
+ \item elaborar a dissertação;
+ \item defender a dissertação;
+\end{itemize}
+
 \section{Cronograma}
 \section{Referência bibliográficas}
+
+\begin{thebibliography}{1}
+
+\bibitem{Savas 2014}
+O. Savasa, Y. Sadguyu, J. Deng, J. Li, \emph{Tactical big data analytics: challenges, use cases and solutions.} In \textit{ACM SIGMETRICS Performance Evaluation
+ Review}, volume 41, pages 86-89.
+\bibitem{Liu:2011}
+K. J. R. Liu and B. Wang, \emph{Cognitive Radio Networking and Security}, Cambridge University Press, 2011.
+
+\bibitem{Chen:2008a}
+R. Chen, J. Park and J. H. Reede, \emph{Defense against primary user emulation attacks in cognitive radio networks}, 
+IEEE Journal on Selected Areas in Communications, v. 26, pp. 25--37, 2008.
+
+\end{thebibliography}
 
 \end{document}
