@@ -6,7 +6,7 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{setspace}
-\usepackage[a4paper]{geometry}
+\usepackage[a4paper,left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
 \usepackage{times}
 % include --------------------------------------------------------------------------------------------------------------------
 % \include{headerFooterUnb}
@@ -51,14 +51,14 @@ verifica-se que a presença de ferramentas e algoritmos capazes de tratar esse v
 \indent Face a este problema, esta proposta de estudo visa basear-se nas áreas de inteligência artifical, teoria dos jogos e 
 sistema de apoio à decisão em Sistemas de Comando e Controle (C2) tendo como foco principal o uso destas teorias para 
 ordenar as informações de tal forma que o valor final agregado ao decisor seja maximizado.\\
-\indent A construção deste modelo é importância ao Exército Brasileiro porque através dele é possível auxiliar o processo de tomada de 
-decisão devido ao fato de evitar ou diminuir a sobrecarga de informação nos decisores. Outro aspecto que aumenta a 
-contribuição desta proposta de trabalho é o contínuo emprego das Forças Armadas, em especial o Exército, em operações 
-de garantia da lei e da ordem e de defesa interna durante as quais a cobertura dos veículos de jornalismo garante a 
-comunicação da informação praticamente em tempo real.
+\indent A construção deste modelo é importante porque através dele é possível auxiliar o processo de tomada de decisão devido ao fato de evitar ou diminuir 
+a sobrecarga de informação nos decisores. Outro aspecto que aumenta a contribuição desta proposta de trabalho é o contínuo emprego das Forças Armadas e 
+Auxiliares (Corpo de Bombeiros e Polícia Militar). No contexto do Exército Brasileiro, este trabalho auxiliará o exercício do Comando e Controle em operações 
+de garantia da lei e da ordem e de defesa interna, atividades nas quais a Força Terrestre tem sido empregada frequentemente. No cenário das Forças Auxiliares,
+a contribuição será na agilidade na priorização das demandas diárias.
 
 \section{Justificativa}
-De acordo com a doutrina de Comando e Controle relaciona a qualidade de informação por meio de sete critérios: precisão, oportunidade, facilidade de uso,
+A doutrina de Comando e Controle \cite{Brasil} relaciona a qualidade de informação por meio de sete critérios: precisão, oportunidade, facilidade de uso,
 suficiência, brevidade e segurança. O segundo item merece atenção especial por relacionar o instante da coleta da informação com o momento até o qual ela é 
 útil para o processo de toma de decisão.\\
 \indent Segundo \cite{Savas 2014}, não existem ferramentas e algoritmos capazes de tratar o volume de informação, principalmente nos critérios supracitados. Aliando à
@@ -108,19 +108,29 @@ O curso será realizado através das seguintes atividades (não necessariamente 
  \item defender a dissertação;
 \end{itemize}
 
+\newpage
 \section{Cronograma}
 \begin{figure}[!hbp]
-  \includegraphics[width=\textwidth]{cronograma.png}
+  \centering
+  \includegraphics[scale=0.5]{cronograma.png}
 \end{figure}
 % \section{Referência bibliográficas}
 
 \begin{thebibliography}{1}
 
+\bibitem{Brasil}
+Brasil, \emph{MD31-D-03: Doutrina Militar de Comando e Controle}, Brasília, 2006.
+
+\bibitem{Phillips 2008}
+D. D. Phillips, \emph{Mathematical Modeling and Optimal Control of Battlefield Information Flow}, Naval Postgraduate School, 
+2008.
+
 \bibitem{Alberts 2006}
-D. S. Albert and R. E. Hayes, \emph{Understanding Command and Control}, CCRP, 2006.
+D. S. Albert, R. E. Hayes, \emph{Understanding Command and Control}, CCRP, 2006.
 
 \bibitem{Athans 1986}
 M. Athans, \emph{Command and Control (C2) Theory: A challenge to control science}, 1986.
+
 \bibitem{Brynielsson 2004}
 J. Brynielsson, S. Arnborg, \emph{Bayesian Games for Threat Prediction and Situation Analysis}, Seventh International
 Conference on Information Fusion, Sweden, 2004.
@@ -128,10 +138,6 @@ Conference on Information Fusion, Sweden, 2004.
 \bibitem{Savas 2014}
 O. Savasa, Y. Sadguyu, J. Deng, J. Li, \emph{Tactical big data analytics: challenges, use cases and solutions.} In 
 \textit{ACM SIGMETRICS Performance Evaluation Review}, volume 41, pages 86-89, 2014.
-
- \bibitem{Phillips 2008}
- D. D. Phillips, \emph{Mathematical Modeling and Optimal Control of Battlefield Information Flow}, Naval Postgraduate School, 
- 2008.
 
 \end{thebibliography}
 
